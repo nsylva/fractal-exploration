@@ -27,7 +27,7 @@ def julia_set(w, h, c = -0.7+ 0.27j, zoom=1, niter=256):
                 # Calculate new positions
                 zy,zx = 2.0*zx*zy + c_imag, zx*zx - zy*zy + c_real
 
-            color = (i >> 21) + (i >> 10)  + i*8
+            color = (i >> 22) + (i >> 10)  + i*8
             pixels[y,x] = color
     
     return pixels
